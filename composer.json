@@ -1,0 +1,19 @@
+{
+    "name": "timuchen/laravel-shopping-cart",
+    "description": "Customizable Laravel shopping cart",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Timuchen\\ShoppingCart\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Timofey Tkachev",
+            "email": "ttkacheff@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
