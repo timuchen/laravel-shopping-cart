@@ -32,10 +32,8 @@ php artisan vendor:publish --provider="Timuchen\ShoppingCart\ShoppingCartService
 
 Full list of published files:
 
-- database/migrations/2020_12_13_000001_create_carts_table
-- database/migrations/2020_12_13_000002_create_cart_items_table
-- routes/checkout.php
-- config/checkout.php
+- database/migrations/create_carts_table
+- database/migrations/create_cart_items_table
 - app/Logistics/CartLogistics.php
 - app/Logistics/ShippingLogistics.php
 - app/Logistics/TaxLogistics.php

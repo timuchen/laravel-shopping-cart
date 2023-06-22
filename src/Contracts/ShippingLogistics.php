@@ -1,6 +1,6 @@
 <?php
 
-namespace Timuchen\ShoppingCart;
+namespace Timuchen\ShoppingCart\Contracts;
 
 use Timuchen\ShoppingCart\Checkout;
 
