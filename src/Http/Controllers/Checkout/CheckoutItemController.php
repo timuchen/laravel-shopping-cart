@@ -28,7 +28,7 @@ class CheckoutItemController extends Controller
             $request->purchaseable_id,
         );
 
-        throw_if(!$purchaseable, PurchaseableNotFoundException::class);
+        hrow_if(!$purchaseable, PurchaseableNotFoundException::class);
 
         return $checkout->addItem(
             purchaseable: $purchaseable,

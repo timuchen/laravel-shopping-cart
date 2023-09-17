@@ -25,9 +25,9 @@ class Checkout
     /**
      * Create a new checkout instance for a cart.
      *
-     * @param \Yab\ShoppingCart\Models\Cart
+     * @param \Timuchen\ShoppingCart\Models\Cart
      */
-    public function __construct(Cart $cart)
+    public function __construct(public Cart $cart)
     {
     }
 
@@ -37,7 +37,7 @@ class Checkout
      * @param string $checkoutId
      * @param bool $withTrashed
      *
-     * @return \Yab\ShoppingCart\Checkout
+     * @return \Timuchen\ShoppingCart\Checkout
      */
     public static function findById(string $checkoutId, bool $withTrashed = false) : Checkout
     {
@@ -53,7 +53,7 @@ class Checkout
     /**
      * Create a fresh new checkout with a new ID.
      *
-     * @return \Yab\ShoppingCart\Checkout
+     * @return \Timuchen\ShoppingCart\Checkout
      */
     public static function create() : Checkout
     {
@@ -85,7 +85,7 @@ class Checkout
     /**
      * Get the underlying cart model for this checkout instance.
      *
-     * @return \Yab\ShoppingCart\Models\Cart
+     * @return \Timuchen\ShoppingCart\Models\Cart
      */
     public function getCart() : Cart
     {
@@ -150,7 +150,7 @@ class Checkout
      * @param float $price - optional
      * @param array $options - optional
      *
-     * @return \Yab\ShoppingCart\Models\CartItem
+     * @return \Timuchen\ShoppingCart\Models\CartItem
      */
     public function addItem(mixed $purchaseable, int $qty, ?float $price = null, ?array $options = []) : CartItem
     {
@@ -174,7 +174,7 @@ class Checkout
      * @param float $price - optional
      * @param array $options - optional
      *
-     * @return \Yab\ShoppingCart\Models\CartItem
+     * @return \Timuchen\ShoppingCart\Models\CartItem
      */
     public function updateItem(int $cartItemId, int $qty, ?float $price = null, ?array $options = []) : CartItem
     {
@@ -191,7 +191,7 @@ class Checkout
      *
      * @param int $cartItemId
      *
-     * @return \Yab\ShoppingCart\Models\CartItem
+     * @return \Timuchen\ShoppingCart\Models\CartItem
      */
     public function removeItem(int $cartItemId) : CartItem
     {
@@ -209,7 +209,7 @@ class Checkout
      * @param string $key
      * @param mixed $payload
      *
-     * @return \Yab\ShoppingCart\Checkout
+     * @return \Timuchen\ShoppingCart\Checkout
      */
     public function setCustomField(string $key, mixed $payload) : Checkout
     {
@@ -244,7 +244,7 @@ class Checkout
      *
      * @param string $code
      *
-     * @return \Yab\ShoppingCart\Checkout
+     * @return \Timuchen\ShoppingCart\Checkout
      */
     public function applyDiscountCode(string $code) : Checkout
     {
@@ -266,7 +266,7 @@ class Checkout
      *
      * @param float $amount
      *
-     * @return \Yab\ShoppingCart\Checkout
+     * @return \Timuchen\ShoppingCart\Checkout
      */
     public function setDiscountAmount(float $amount) : Checkout
     {
@@ -341,7 +341,7 @@ class Checkout
      *
      * @param string $code
      *
-     * @return \Yab\ShoppingCart\Checkout
+     * @return \Timuchen\ShoppingCart\Checkout
      */
     private function setDiscountCode(string $code) : Checkout
     {
@@ -357,7 +357,7 @@ class Checkout
      *
      * @param mixed $purchaseable
      *
-     * @throws \Yab\ShoppingCart\Exceptions\ItemNotPurchaseableException
+     * @throws \Timuchen\ShoppingCart\Exceptions\ItemNotPurchaseableException
      *
      * @return void
      */
@@ -374,7 +374,7 @@ class Checkout
      *
      * @param mixed $purchaser
      *
-     * @throws \Yab\ShoppingCart\Exceptions\PurchaserInvalidException
+     * @throws \Timuchen\ShoppingCart\Exceptions\PurchaserInvalidException
      *
      * @return void
      */
