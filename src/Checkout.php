@@ -212,7 +212,7 @@ class Checkout
      */
     public function restoreItem(int $cartItemId) : CartItem
     {
-        $item = CartItem::findOrFail($cartItemId);
+        $item = CartItem::withTrashed()->findOrFail($cartItemId);
         $item->restore();
 
         return $item;
