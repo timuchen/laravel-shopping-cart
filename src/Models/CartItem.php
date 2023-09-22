@@ -66,7 +66,7 @@ class CartItem extends Model
      */
     public function setQty(int $qty) : CartItem
     {
-        $this->qty = $this->qty + $qty ?? $qty;
+        $this->qty = $qty;
         return $this;
     }
 
