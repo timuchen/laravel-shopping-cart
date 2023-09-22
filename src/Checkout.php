@@ -204,6 +204,21 @@ class Checkout
     }
 
     /**
+     * Restore item from the cart.
+     *
+     * @param int $cartItemId
+     *
+     * @return \Timuchen\ShoppingCart\Models\CartItem
+     */
+    public function restoreItem(int $cartItemId) : CartItem
+    {
+        $item = CartItem::findOrFail($cartItemId);
+        $item->restore();
+
+        return $item;
+    }
+
+    /**
      * Set a custom field value for this cart.
      *
      * @param string $key
