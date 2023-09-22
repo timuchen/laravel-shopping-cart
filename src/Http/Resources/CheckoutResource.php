@@ -21,7 +21,7 @@ class CheckoutResource extends JsonResource
         ];
 
         if ($this->hasInfoNeededToCalculateTotal()) {
-            $arr['options'] = $this->getCheckoutTotals();
+            $arr['params'] = $this->getCheckoutTotals();
         }
 
         return $arr;
