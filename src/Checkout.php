@@ -179,7 +179,7 @@ class Checkout
     public function updateItem(int $cartItemId, int $qty, ?float $price = null, ?array $options = []) : CartItem
     {
         $item = CartItem::findOrFail($cartItemId);
-        $item->setQty($qty)->setOptions($options)->calculatePrice($price)->save();
+        $item->setQty($qty)->calculatePrice($price)->save();
 
         event(new CartItemUpdated($item));
 
