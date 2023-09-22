@@ -346,9 +346,19 @@ class Checkout
      *
      * @return float
      */
-    public function getTotal() : float
+    public function extraCharge() : float
     {
         return round($this->getSubtotal() - $this->getDiscount() + $this->getTaxes(), 2);
+    }
+
+    /**
+     * Get the total price.
+     *
+     * @return float
+     */
+    public function getTotal() : float
+    {
+        return round($this->getSubtotal(),2);
     }
 
     /**

@@ -39,6 +39,7 @@ class CheckoutResource extends JsonResource
             'discount' => $this->getDiscount(),
             'taxes' => $this->getTaxes(),
             'total' => $this->getTotal(),
+            'extra_charge' => $this->extraCharge()
         ];
     }
 }
